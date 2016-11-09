@@ -1,0 +1,33 @@
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+Enter Event Name: <input type="text" id="myText1" value=" "> </p>
+Enter Event Date MM/DD/YY: <input type="text" id="myText2" value=" "> </p>
+Enter Event Location: <input type="text" id="myText3" value=" "> </p>
+
+</p>
+<img id="qr" src="" alt="" title="" />
+
+<p>Click the button to get a QRCODE for your event</p>
+
+
+
+<button onclick="myFunction()">Get my QRCode</button>
+
+<script>
+function myFunction() {
+	var mm1 = document.getElementById("myText1").value;
+	var mm2 = document.getElementById("myText2").value;;
+	var mm3 = document.getElementById("myText3").value;;
+    //document.getElementById("qr").src = "https://api.qrserver.com/v1/create-qr-code/?data=Erdem+Yilmaz+10/12/16+6PM+to+9Pm&amp;size=100x100";
+    document.getElementById("qr").src = "https://api.qrserver.com/v1/create-qr-code/?data="+mm1+"  "+mm2+"  "+mm3+"  "+"&amp;size=100x100";
+}
+</script>
+
+</body>
+</html>
